@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prison Break: The Complete Story — SGSS Books</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Merriweather', Georgia, serif;
+    color: #f0f0f0;
+    background: #0a0a0a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    padding: 40px 20px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5em;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+  }
+  .hero .subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3em;
+    font-style: italic;
+    color: #b0b0b0;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  .hero .tagline {
+    font-size: 0.95em;
+    color: #888;
+    margin-bottom: 40px;
+    font-style: italic;
+  }
+  .hero .stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  .hero .stat {
+    text-align: center;
+  }
+  .hero .stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    font-weight: 700;
+    color: #fff;
+  }
+  .hero .stat-label {
+    font-size: 0.8em;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .btn {
+    display: inline-block;
+    padding: 16px 40px;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: all 0.3s;
+    margin: 8px;
+  }
+  .btn-primary {
+    background: #e74c3c;
+    color: #fff;
+  }
+  .btn-primary:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+  }
+  .btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #555;
+  }
+  .btn-secondary:hover {
+    border-color: #fff;
+    transform: translateY(-2px);
+  }
+
+  /* About Section */
+  .about {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .about h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  .about p {
+    font-size: 1.05em;
+    line-height: 1.9;
+    color: #b0b0b0;
+    margin-bottom: 15px;
+  }
+
+  /* Chapters Preview */
+  .chapters {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+  }
+  .chapters h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+  }
+  .chapter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  .chapter-card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 20px;
+    transition: all 0.3s;
+  }
+  .chapter-card:hover {
+    border-color: #e74c3c;
+    transform: translateY(-2px);
+  }
+  .chapter-card .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    color: #e74c3c;
+    font-weight: 700;
+  }
+  .chapter-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1em;
+    color: #ddd;
+    margin: 8px 0 6px;
+  }
+  .chapter-card p {
+    font-size: 0.85em;
+    color: #888;
+    line-height: 1.5;
+  }
+
+  /* Support */
+  .support {
+    text-align: center;
+    padding: 50px 20px;
+    background: #111;
+    border-top: 1px solid #222;
+  }
+  .support h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  .support p {
+    color: #888;
+    margin-bottom: 20px;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.85em;
+    color: #555;
+    border-top: 1px solid #222;
+  }
+  footer a { color: #888; text-decoration: none; }
+  footer a:hover { color: #fff; }
+
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 2em; }
+    .hero .stats { gap: 20px; }
+    .hero .stat-number { font-size: 1.5em; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-content">
+    <h1>Prison Break</h1>
+    <div class="subtitle">The Complete Story of Television's Greatest Escape</div>
+    <p class="tagline">A comprehensive book covering all five seasons, iconic characters, unforgettable moments, and lasting legacy</p>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-number">15</div>
+        <div class="stat-label">Chapters</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">20K+</div>
+        <div class="stat-label">Words</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">5</div>
+        <div class="stat-label">Seasons</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">90</div>
+        <div class="stat-label">Episodes</div>
+      </div>
+    </div>
+    <div>
+      <a href="v1.0/book.html" class="btn btn-primary">📖 Read Online</a>
+      <a href="v1.0/Prison-Break.pdf" class="btn btn-secondary">📥 Download PDF</a>
+    </div>
+  </div>
+</div>
+
+<div class="about">
+  <h2>About This Book</h2>
+  <p><em>Prison Break</em> captivated the world when it premiered in 2005 — a brilliant structural engineer gets himself imprisoned alongside his wrongly condemned brother, armed only with a meticulously detailed escape plan tattooed across his own body. What followed was one of the most thrilling, emotionally devastating, and endlessly rewatchable television series ever produced.</p>
+  <p>This book is a comprehensive celebration of everything that made <em>Prison Break</em> extraordinary: the intricate plotting, the unforgettable characters, the nail-biting tension, the unexpected humor, and the enduring themes of brotherhood, sacrifice, and love. Whether you're a lifelong fan or discovering the show for the first time, this guide will deepen your appreciation for a series that changed television forever.</p>
+</div>
+
+<div class="chapters">
+  <h2>Chapters</h2>
+  <div class="chapter-grid">
+    <div class="chapter-card"><div class="num">01</div><h3>Introduction</h3><p>The series that captivated the world and redefined television storytelling</p></div>
+    <div class="chapter-card"><div class="num">02</div><h3>The Concept</h3><p>How Paul Scheuring created the show and pitched the impossible</p></div>
+    <div class="chapter-card"><div class="num">03</div><h3>Season 1: Fox River</h3><p>The prison, the plan, the breakout — a masterpiece of suspense</p></div>
+    <div class="chapter-card"><div class="num">04</div><h3>Season 2: On the Run</h3><p>The manhunt across America — fugitives, betrayal, and pursuit</p></div>
+    <div class="chapter-card"><div class="num">05</div><h3>Season 3: Sona</h3><p>The Panamanian nightmare — a prison within a prison</p></div>
+    <div class="chapter-card"><div class="num">06</div><h3>Season 4: The Company</h3><p>Unraveling the conspiracy that reached into the highest power</p></div>
+    <div class="chapter-card"><div class="num">07</div><h3>Season 5: Resurrection</h3><p>The revival — Michael returns from the grave</p></div>
+    <div class="chapter-card"><div class="num">08</div><h3>Michael Scofield</h3><p>The genius protagonist whose love redefined heroism</p></div>
+    <div class="chapter-card"><div class="num">09</div><h3>Lincoln Burrows</h3><p>The heart of the show — the brother who would not break</p></div>
+    <div class="chapter-card"><div class="num">10</div><h3>The Supporting Cast</h3><p>Sucre, Bellick, T-Bag, Mahone, Sara, and the unforgettable ensemble</p></div>
+    <div class="chapter-card"><div class="num">11</div><h3>The Villains</h3><p>The Company, The General, and the antagonists who tested our heroes</p></div>
+    <div class="chapter-card"><div class="num">12</div><h3>What Makes It Eye-Catching</h3><p>Tension, cliffhangers, and visual storytelling at its finest</p></div>
+    <div class="chapter-card"><div class="num">13</div><h3>Funny Moments</h3><p>Humor in unexpected places — comedy behind the walls</p></div>
+    <div class="chapter-card"><div class="num">14</div><h3>Behind the Scenes</h3><p>Production, filming locations, and the chemistry that made it real</p></div>
+    <div class="chapter-card"><div class="num">15</div><h3>Legacy and Impact</h3><p>Cultural impact, fan community, and influence on television</p></div>
+  </div>
+</div>
+
+<div class="support">
+  <h3>Enjoyed This Book?</h3>
+  <p>If this book brought you joy, consider supporting the author so we can create more like it.</p>
+  <a href="https://walusimbi-leon1.github.io/voice-support/" target="_blank" class="btn btn-primary">❤️ Support Us</a>
+</div>
+
+<footer>
+  <p><a href="https://github.com/Walusimbi-Leon1/prison-break">SGSS Books</a> · &copy; 2026</p>
+</footer>
+
+</body>
+</html>
