@@ -216,6 +216,23 @@
     .hero .stats { gap: 20px; }
     .hero .stat-number { font-size: 1.5em; }
   }
+
+.other-books-section {
+  margin-top:40px; padding-top:30px; border-top:1px solid rgba(255,255,255,0.08);
+  max-width:800px; margin-left:auto; margin-right:auto;
+}
+.other-books-grid {
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:10px;
+}
+.other-book-card { text-decoration:none; display:block; }
+.other-book-card .other-book-inner {
+  background:rgba(255,255,255,0.04); border-radius:6px; padding:10px 12px;
+  border-top:3px solid #5cb85c; transition:all 0.2s; height:100%;
+}
+.other-book-card:hover .other-book-inner { background:rgba(255,255,255,0.08); transform:translateY(-2px); }
+.other-book-inner strong { color:#5cb85c; font-size:0.85rem; display:block; margin-bottom:3px; }
+.other-book-inner span { color:#999; font-size:0.75rem; line-height:1.3; }
+
 </style>
 </head>
 <body>
@@ -285,6 +302,31 @@
 
 <footer>
   <p><a href="https://github.com/Walusimbi-Leon1/prison-break">SGSS Books</a> · &copy; 2026</p>
+<div class="other-books-section">
+<h2 style="font-size:1.5em;margin-bottom:10px;color:var(--accent,#5cb85c);">📚 More Books</h2>
+<p style="color:#888;font-size:0.9rem;margin-bottom:15px;">Discover other books from the SGSS Literary Collection:</p>
+<div class="other-books-grid">
+<a href="https://walusimbi-leon1.github.io/salt-and-silk/" class="other-book-card" target="_blank"><div class="other-book-inner"><strong>Salt & Silk</strong><span>A literary novel of desire spanning five continents.</span></div></a>
+<a href="https://walusimbi-leon1.github.io/the-rhythm-of-your-heart/" class="other-book-card" target="_blank"><div class="other-book-inner"><strong>The Rhythm of Your Heart</strong><span>A deaf artist and a jazz pianist discover love beyond sound.</span></div></a>
+<a href="https://walusimbi-leon1.github.io/whispers-of-destiny/" class="other-book-card" target="_blank"><div class="other-book-inner"><strong>Whispers of Destiny</strong><span>A photographer and architect follow fate across continents.</span></div></a>
+<a href="https://walusimbi-leon1.github.io/letters-i-never-sent/" class="other-book-card" target="_blank"><div class="other-book-inner"><strong>Letters I Never Sent</strong><span>47 unsent love letters found in a bookshop.</span></div></a>
+<a href="https://walusimbi-leon1.github.io/under-the-acacia-tree/" class="other-book-card" target="_blank"><div class="other-book-inner"><strong>Under the Acacia Tree</strong><span>Love rediscovered in a village after loss.</span></div></a>
+<a href="https://walusimbi-leon1.github.io/beyond-the-horizon/" class="other-book-card" target="_blank"><div class="other-book-inner"><strong>Beyond the Horizon</strong><span>Love that transcends oceans and continents.</span></div></a>
+<a href="https://walusimbi-leon1.github.io/dialogues-with-my-love/" class="other-book-card" target="_blank"><div class="other-book-inner"><strong>Dialogues With My Love</strong><span>A true story of love across oceans.</span></div></a>
+<a href="https://walusimbi-leon1.github.io/atlas-of-feeling/" class="other-book-card" target="_blank"><div class="other-book-inner"><strong>Atlas of Feeling</strong><span>A guide to every human emotion — 33 chapters.</span></div></a>
+<a href="https://walusimbi-leon1.github.io/architecture-of-stillness/" class="other-book-card" target="_blank"><div class="other-book-inner"><strong>Architecture of Stillness</strong><span>A philosophical meditation.</span></div></a>
+<a href="https://walusimbi-leon1.github.io/burning-hours/" class="other-book-card" target="_blank"><div class="other-book-inner"><strong>The Taste of You</strong><span>An explicit international romance of food and desire.</span></div></a>
+<a href="https://walusimbi-leon1.github.io/fullmetal-alchemist-brotherhood/" class="other-book-card" target="_blank"><div class="other-book-inner"><strong>Fullmetal Alchemist</strong><span>The complete guide to a perfect anime.</span></div></a>
+<a href="https://walusimbi-leon1.github.io/breaking-bad/" class="other-book-card" target="_blank"><div class="other-book-inner"><strong>Breaking Bad</strong><span>The complete guide to the greatest TV drama.</span></div></a>
+<a href="https://walusimbi-leon1.github.io/attack-on-titan/" class="other-book-card" target="_blank"><div class="other-book-inner"><strong>Attack on Titan</strong><span>The complete companion to the anime masterpiece.</span></div></a>
+<a href="https://walusimbi-leon1.github.io/legend-of-the-galactic-heroes/" class="other-book-card" target="_blank"><div class="other-book-inner"><strong>Legend of the Galactic Heroes</strong><span>Complete companion to the space opera.</span></div></a>
+<a href="https://walusimbi-leon1.github.io/mushi-shi-next-passage/" class="other-book-card" target="_blank"><div class="other-book-inner"><strong>Mushi-Shi</strong><span>The complete companion to the anime of stillness.</span></div></a>
+<a href="https://walusimbi-leon1.github.io/death-note/" class="other-book-card" target="_blank"><div class="other-book-inner"><strong>Death Note</strong><span>The complete companion to the battle of wits.</span></div></a>
+<a href="https://walusimbi-leon1.github.io/minecraft-successful/" class="other-book-card" target="_blank"><div class="other-book-inner"><strong>Minecraft Successful</strong><span>A GTA-style story-driven Minecraft mission book.</span></div></a>
+<a href="https://walusimbi-leon1.github.io/city-songs/" class="other-book-card" target="_blank"><div class="other-book-inner"><strong>City Songs</strong><span>A song for every city in the world.</span></div></a>
+</div>
+</div>
+
 </footer>
 
 </body>
