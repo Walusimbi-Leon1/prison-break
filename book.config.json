@@ -1,0 +1,17 @@
+{
+  "title": "Prison Break",
+  "subtitle": "The Complete Story",
+  "genre": "TV companion",
+  "author": "Walusimbi Leon (SGSS)",
+  "description": "The complete story of television's greatest escape — a companion to Prison Break: the characters, seasons, themes, and legacy.",
+  "style": "Engaging, knowledgeable, fan-aware prose. Accessible and detailed.",
+  "characters": "Michael Scofield, Lincoln Burrows, the Fox River Eight, and the series' creators.",
+  "setting": "Fox River State Penitentiary and the world of the show.",
+  "notes": "Continue the companion chapters in order through the seasons and the series' legacy. Include episode-level detail, character arcs, and themes.",
+  "chapterTitle": "Chapter",
+  "mdFiles": ["v1.0/book.html"],
+  "htmlFiles": [],
+  "indexInject": null,
+  "mdHeadingLevel": 2,
+  "targetWords": 2000
+}
